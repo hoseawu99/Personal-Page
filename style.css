@@ -1,7 +1,22 @@
+@font-face {
+	font-family: 'Darlington';
+	src: url('./font/Darlington.ttf') format('truetype'); /* 指定字体文件 */
+}
+
+@font-face {
+	font-family: 'BailsunSerif-Thin';
+	src: url('./font/BailsunSerif-Thin.ttf') format('truetype'); /* 指定字体文件 */
+}
+
+@font-face {
+	font-family: 'BailsunSerif-Regular';
+	src: url('./font/BailsunSerif-Regular.ttf') format('truetype'); /* 指定字体文件 */
+}
+
 * {
 	margin: 0;
 	padding: 0;
-	font-size: 14px;
+	font-family: 'BailsunSerif-Regular';
 }
 
 .global {
@@ -12,44 +27,63 @@
 	width: 100%;
 
 	.main {
+		max-width: 600px;
+		width: 100%;
+		padding: 40px;
+		position: relative;
+		top: -10%;
+
 		.logo {
 			font-size: 48px;
-			margin-bottom: 10px;
-			font-weight: 500;
-            text-shadow: 0px 0px 3px gray;
-            user-select: none;
+			margin-bottom: 36px;
+			user-select: none;
+			font-family: 'Darlington';
 		}
 	}
-}
 
-.link-item {
-    user-select: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #333;
+	.text {
+		font-family: 'BailsunSerif-Regular';
+		font-size: 18px;
+		margin-bottom: 24px;
+		p {
+			text-indent: 2em;
+			line-height: 1.5;
+			margin-bottom: 4px;
+		}
+	}
+	.contact {
+		margin-bottom: 24px;
+		p {
+			text-indent: 2em;
+		}
 
-	.icon {
-		height: 20px;
-		width: auto;
-		margin-right: 4px;
+		ul {
+			margin-left: 2em;
+			margin-top: 12px;
+			list-style: none;
+			li {
+				font-size: 16px;
+				margin-bottom: 4px;
+			}
+		}
 	}
 
-	.link {
-		text-decoration: none;
-		color: #333;
-	}
+	.friends {
+		margin-bottom: 24px;
+		p {
+			text-indent: 2em;
+		}
 
-	.link:hover {
-		text-decoration: underline;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	.global {
-		align-items: flex-start;
-		.main {
-			margin-top: 40%;
+		ul {
+			margin-left: 2em;
+			margin-top: 12px;
+			list-style: none;
+			li {
+				display: inline-block;
+				margin-right: 2px;
+				font-size: 14px;
+				margin-bottom: 4px;
+			}
 		}
 	}
 }
